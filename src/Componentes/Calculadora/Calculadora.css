@@ -1,0 +1,28 @@
+.botonNumero
+{
+	width: 4vw;
+	height: 4vw;
+	font-size: 2vw;
+	border-radius: 1rem;
+}
+.contentNum
+{
+	background-color: #4a4;
+	display: grid;
+	grid-gap: 0.5vw;
+	grid-template-columns: repeat(3, 4vw);
+	width: max-content;
+}
+.inputNume
+{
+	width: 100%;
+	font-size: 2vw;
+	padding: 1vw;
+	text-align: right;
+}
+.Calculadora
+{
+	background-color: #434;
+	width: 50%;
+	height: max-content;
+}
