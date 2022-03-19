@@ -6,6 +6,8 @@ export default function Contador()
 		<div className="Calculadora">
 			<input className="inputNume" type="text" onKeyPress={(event)=> validaTeclas(event)} id="inputNume"/>
 			<div className="contentNum">
+				<Boton text="/"/>
+				<Boton text="%"/>
 				<Boton text="+"/>
 				<Boton text="*"/>
 				<Boton text="X"/>
@@ -53,7 +55,7 @@ function cambiaTexto(texto)
 {
 	var inputNume = document.getElementById("inputNume");
 	let valueT = inputNume.value;
-	if(texto=="=")
+	if(texto=="=" && valueT)
 		valueT = new Function('return ' + valueT)();
 	else if(texto=="X")
 		valueT ="";

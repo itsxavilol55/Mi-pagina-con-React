@@ -17,7 +17,7 @@ const NombresComp =
 			"Contador",
 			"Slider de Texto",
 			"Nav Bar Responsive",
-			"Calculadora"
+			"Calculadora "
 		];				
 const arreglos = [componentesArray,NombresComp];
 export default arreglos;			
