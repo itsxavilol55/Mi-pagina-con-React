@@ -7,6 +7,7 @@ export default function Contador()
 			<input className="inputNume" type="text" onKeyPress={(event)=> validaTeclas(event)} id="inputNume"/>
 			<div className="contentNum">
 				<Boton text="/"/>
+				<Boton text="-"/>
 				<Boton text="%"/>
 				<Boton text="+"/>
 				<Boton text="*"/>
