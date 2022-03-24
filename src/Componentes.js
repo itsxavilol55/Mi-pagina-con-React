@@ -3,13 +3,15 @@ import Contador from './Componentes/Contador/Contador.js';
 import SliderText from './Componentes/SliderText/SliderText.js';
 import NavBarRespo from './Componentes/NavBarRespo/NavBarRespo.js';
 import Calculadora from './Componentes/Calculadora/Calculadora.js';
+import Imagenes from './Componentes/Imagenes/Imagenes.js';
 const componentesArray =
 		[
 			<RandomColor/>,
 			<Contador/>,
 			<SliderText/>,
 			<NavBarRespo/>,
-			<Calculadora/>
+			<Calculadora/>,
+			<Imagenes/>
 		]; 				
 const NombresComp = 
 		[
@@ -17,7 +19,8 @@ const NombresComp =
 			"Contador",
 			"Slider de Texto",
 			"Nav Bar Responsive",
-			"Calculadora "
+			"Calculadora",
+			"Carrucel de Imagenes"
 		];				
 const arreglos = [componentesArray,NombresComp];
 export default arreglos;			

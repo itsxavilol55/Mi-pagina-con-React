@@ -1,7 +1,6 @@
 import './Calculadora.css';
 export default function Contador()
 {
-	console.log("render");
 	return(
 		<div className="Calculadora">
 			<input className="inputNume" type="text" onKeyPress={(event)=> validaTeclas(event)} id="inputNume"/>
@@ -11,19 +10,19 @@ export default function Contador()
 				<Boton text="%"/>
 				<Boton text="+"/>
 				<Boton text="*"/>
-				<Boton text="X"/>
 				<Boton text="1"/>
 				<Boton text="2"/>
 				<Boton text="3"/>
+				<Boton text="X"/>
 				<Boton text="4"/>
 				<Boton text="5"/>
 				<Boton text="6"/>
+				<Boton text="="/>
 				<Boton text="7"/>
 				<Boton text="8"/>
 				<Boton text="9"/>
-				<Boton text="0"/>
 				<Boton text="."/>
-				<Boton text="="/>
+				<Boton text="0"/>
 			</div>
 		</div>);
 }

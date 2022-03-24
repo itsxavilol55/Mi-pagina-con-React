@@ -1,0 +1,14 @@
+img
+{
+	width: 22vw;
+	height: 22vw;
+	margin: 1vw;
+	border-radius: 2vw;
+}
+img:hover
+{
+	filter: blur(2vw);
+	transform: translateX(3vw);
+	filter: opacity(0);
+	transition: all 250ms linear 10ms;
+}
