@@ -21,7 +21,7 @@ p
 	border-radius: clamp(20px ,1vw, 40px);
 	box-shadow: 0.1vw 0.2vw 0.7vw black;
 }
-#boton2
+#boton2, #boton20, #boton21
 {
 	height: clamp(35px, 3vw, 40px);
 	width: clamp(35px, 3vw, 40px);

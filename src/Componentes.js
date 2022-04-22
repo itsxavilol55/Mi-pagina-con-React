@@ -3,7 +3,8 @@ import Contador from './Componentes/Contador/Contador.js';
 import SliderText from './Componentes/SliderText/SliderText.js';
 import NavBarRespo from './Componentes/NavBarRespo/NavBarRespo.js';
 import Calculadora from './Componentes/Calculadora/Calculadora.js';
-import Imagenes from './Componentes/Imagenes/Imagenes.js';
+import Imagenes from './Componentes/Imagenes/Imagenes';
+import Cubo from './Componentes/Cubo/Cubo.js';
 const componentesArray =
 		[
 			<RandomColor/>,
@@ -11,7 +12,8 @@ const componentesArray =
 			<SliderText/>,
 			<NavBarRespo/>,
 			<Calculadora/>,
-			<Imagenes/>
+			<Imagenes/>,
+			<Cubo/>
 		]; 				
 const NombresComp = 
 		[
@@ -20,7 +22,8 @@ const NombresComp =
 			"Slider de Texto",
 			"Nav Bar Responsive",
 			"Calculadora",
-			"Carrucel de Imagenes"
+			"Carrucel de Imagenes",
+			"Cubo Imagenes"
 		];				
 const arreglos = [componentesArray,NombresComp];
 export default arreglos;			

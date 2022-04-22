@@ -4,7 +4,10 @@ img
 	height: 22vw;
 	margin: 1vw;
 	border-radius: 2vw;
-	position: absolute;
+	position: relative;
+}
+.imagen0
+{
 	display: none;
 }
 .divImag
@@ -15,12 +18,19 @@ img
 	width: max-content;
 	height: max-content;
 }
-img:hover
+.moverDerecha
 {
 	filter: blur(2vw);
 	transform: translateX(3vw);
 	filter: opacity(0);
-	transition: all 250ms linear 10ms;
+	transition: filter 300ms 400ms, transform 700ms;
+}
+.moverIzquierda
+{
+	filter: blur(2vw);
+	transform: translateX(-3vw);
+	filter: opacity(0);
+	transition: filter 300ms 400ms, transform 700ms;
 }
 .divCenter
 {

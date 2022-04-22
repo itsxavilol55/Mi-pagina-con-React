@@ -1,38 +1,63 @@
 import './Imagenes.css';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, memo} from 'react';
+import Imagen from '../ImagenComp';
 export default function Imagenes () 
 {
-	let array1 = new Array(5);
+	let array1 = new Array(7);
 	const [count, setCount] = useState(0);
-	array1.fill("");
+	useEffect(() => 
+	{
+		inicialImagen();
+	}, []);
 	return(
 		<div className="divCenter">
-			<button id="boton2" onClick={setCount(2)}>
+			<button id="boton20" onClick={()=> 
+				{
+					if(count == 0) setCount(array1.length-1);
+					else setCount(count-1);
+					cambiaImagenIzq(count, array1.length);
+				}}>
 				<i className="fa-solid fa-angles-left"></i>
 			</button>
 		 	<div className="divImag">
-		 	{
-		 		array1.map((x,index) => <Imagen key={index}/>)
-		 	}
+		 		<ListaImagenes array1={array1}/>
 		 	</div>
-			<button id="boton2"> 
+			<button id="boton21" onClick={()=> 
+				{
+					if(count == array1.length-1) setCount(0);
+					else setCount(count+1);
+					cambiaImagenDer(count,array1.length);
+				}}>
 				<i className="fa-solid fa-angles-right"></i>
 			</button>
 		</div>);
 }
-function Imagen()
+function inicialImagen()
 {
-	const API_URL = "https://picsum.photos/v2/list?page=2&limit=1000";
-	const [imageUrl, setImageUrl] = useState("https://cdn.pixabay.com/photo/2015/02/22/17/56/loading-645268_960_720.jpg");
-	useEffect(() => 
-	{
-		let num = Math.floor((Math.random()*100));
-		fetch(API_URL)
-		.then(response => response.json())
-		.then(photos => setImageUrl(photos[num].download_url));
-	}, []);
-	return(
-		<>
-			<img src={imageUrl} alt="Imagen"/>
-		</>);
+	let conteImg = document.getElementById('contenedor');
+	conteImg.childNodes[0].classList.remove("imagen0");
 }
+function cambiaImagenIzq(valor,total)
+{
+	let conteImg = document.getElementById('contenedor');
+	conteImg.childNodes[valor].classList.add("imagen0");
+	if(valor == 0) conteImg.childNodes[total-1].classList.remove("imagen0");
+	else conteImg.childNodes[valor-1].classList.remove("imagen0");
+}
+function cambiaImagenDer(valor,total)
+{
+	let conteImg = document.getElementById('contenedor');
+	conteImg.childNodes[valor].classList.add("imagen0");
+	if(valor == total-1) conteImg.childNodes[0].classList.remove("imagen0");
+	else conteImg.childNodes[valor+1].classList.remove("imagen0");
+	
+}
+const ListaImagenes = memo(
+(props) =>
+{
+	props.array1.fill("");
+	return(
+		<div id="contenedor"> 
+			{props.array1.map((x,index) => x = <Imagen clase="imagen0" key={index}/>)}
+		</div>);
+});
