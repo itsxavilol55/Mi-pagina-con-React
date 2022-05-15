@@ -6,6 +6,7 @@ import Calculadora from './Componentes/Calculadora/Calculadora.js';
 import Imagenes from './Componentes/Imagenes/Imagenes';
 import Cubo from './Componentes/Cubo/Cubo.js';
 import Game from './Componentes/EjemploReact/ejemplo.js';
+import CanalView from './Componentes/CanalView/CanalView.js';
 const componentesArray =
 		[
 			<RandomColor/>,
@@ -15,7 +16,8 @@ const componentesArray =
 			<Calculadora/>,
 			<Imagenes/>,
 			<Cubo/>,
-			<Game/>
+			<Game/>,
+			<CanalView/>
 		]; 				
 const NombresComp = 
 		[
@@ -26,7 +28,8 @@ const NombresComp =
 			"Calculadora",
 			"Carrucel de Imagenes",
 			"Cubo Imagenes",
-			"Juego React"
+			"Juego React",
+			"Canal View"
 		];				
 const arreglos = [componentesArray,NombresComp];
 export default arreglos;			

@@ -1,0 +1,35 @@
+.contenedor
+{
+	border: 0.5vh #93d solid;
+	background-color: #000;
+	height: max-content;
+	width: max-content;
+	display: flex;
+	align-items: center;
+	padding: 1vh 2vh;
+}
+.etiquetas
+{
+	display: flex;
+	width: max-content;
+	flex-direction: column;
+}
+.etiquetas > div
+{
+	display: flex;
+	flex-direction: row;
+}
+.etiquetas > div > p
+{
+	padding: 0 1vw;
+	color: #fff;
+	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+}
+.iconoCanal
+{
+	outline: 3px solid #fff;
+	width: 3.7vw;
+	height: 3.7vw;
+	margin: 0;
+	border-radius: 50%;
+}
