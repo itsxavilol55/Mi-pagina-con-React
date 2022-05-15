@@ -5,6 +5,7 @@ import NavBarRespo from './Componentes/NavBarRespo/NavBarRespo.js';
 import Calculadora from './Componentes/Calculadora/Calculadora.js';
 import Imagenes from './Componentes/Imagenes/Imagenes';
 import Cubo from './Componentes/Cubo/Cubo.js';
+import Game from './Componentes/EjemploReact/ejemplo.js';
 const componentesArray =
 		[
 			<RandomColor/>,
@@ -13,7 +14,8 @@ const componentesArray =
 			<NavBarRespo/>,
 			<Calculadora/>,
 			<Imagenes/>,
-			<Cubo/>
+			<Cubo/>,
+			<Game/>
 		]; 				
 const NombresComp = 
 		[
@@ -23,7 +25,8 @@ const NombresComp =
 			"Nav Bar Responsive",
 			"Calculadora",
 			"Carrucel de Imagenes",
-			"Cubo Imagenes"
+			"Cubo Imagenes",
+			"Juego React"
 		];				
 const arreglos = [componentesArray,NombresComp];
 export default arreglos;			
