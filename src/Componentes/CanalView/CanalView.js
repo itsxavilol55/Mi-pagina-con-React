@@ -4,11 +4,12 @@ import {useState,useEffect} from 'react';
 export default function Canalview() 
 {
 	return(
+		<>
 		<div className="contenedor">
-			<Imagen clase="iconoCanal"/>
+			<img src="https://unavatar.io/twitter/itsxavilol55" className="iconoCanal"/>
 			<div className="etiquetas">
 				<div>
-					<p>Javier Eduardo</p>
+					<p className="nombre">Javier Eduardo</p>
 					<Contador/>
 				</div>
 				<div>
@@ -16,7 +17,8 @@ export default function Canalview()
 					<p>Unirse</p>
 				</div>
 			</div>
-		</div>);
+		</div>
+		</>);
 }
 function Contador()
 {
@@ -29,16 +31,16 @@ function Contador()
 		i-=2;
 		if(i>1) subs2 = ","+parte11+subs2;
 		else subs2 = parte11+subs2;
-	}	
+	}
+	subs2 = subs2 +" suscritores"
 	return(
 		<>
-			<p>{subs2}</p>
+			<p className="contador">{subs2}</p>
 		</>);
 }
 function Subscrito()
 {
-	return(
-		<>
-			<p>Subs</p>
-		</>);
+	const [isSub, setIsSub]= useState(false);
+	if(isSub) return(<p className="suscrito">Suscrito</p>);
+	else return(<p className="suscribir">Suscribir</p>);
 }

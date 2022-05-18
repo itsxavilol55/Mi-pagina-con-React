@@ -18,12 +18,12 @@
 {
 	display: flex;
 	flex-direction: row;
+	align-items: baseline;
 }
 .etiquetas > div > p
 {
-	padding: 0 1vw;
-	color: #fff;
-	font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+	padding: 0 0.8vw;
+	font-weight: 450;
 }
 .iconoCanal
 {
@@ -32,4 +32,16 @@
 	height: 3.7vw;
 	margin: 0;
 	border-radius: 50%;
+}
+.contador
+{
+	font-size: 95%;
+	color: #999;
+	font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+.nombre
+{
+	font-size: 115%;
+	color: #fff;
+	font-family: Segoe, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }

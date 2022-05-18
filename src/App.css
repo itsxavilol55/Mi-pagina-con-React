@@ -27,7 +27,7 @@
     background-color: #5cF;
     position: absolute;
     width: 30%;
-    height: 100%;
+    height: max-content;
     right: 0px;
     border: solid 0.9vh #000;
     border-top: solid 0px #000;
