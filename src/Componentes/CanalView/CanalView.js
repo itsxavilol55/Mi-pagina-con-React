@@ -40,7 +40,14 @@ function Contador()
 }
 function Subscrito()
 {
+	let text="";
 	const [isSub, setIsSub]= useState(false);
-	if(isSub) return(<p className="suscrito">Suscrito</p>);
-	else return(<p className="suscribir">Suscribir</p>);
+	if(isSub) text="SUSCRITO";
+	else text="SUSCRIBIRSE"
+	return(
+		<p 
+			className={text} 
+			onClick={()=> setIsSub(!isSub)}>
+			{text}
+		</p>);
 }

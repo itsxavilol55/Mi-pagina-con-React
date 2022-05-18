@@ -7,7 +7,7 @@ function Header(props)
 { //muestra el header de la pagina y el boton del menu extendido
     return(
         <div className={props.clase}>
-            <div className="mitad">Practicas Javier Eduardo </div>
+            <div className="mitad">Pagina con React Javier Eduardo</div>
             {props.children}
         </div>);
 }

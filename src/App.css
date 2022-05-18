@@ -1,8 +1,8 @@
 *{margin: 0px; padding: 0px;}
 .header, .headerMenu
 {
-    background-color: #49F;
-    font: 2vw Georgia sans-serif;
+    background-color: #4cF;
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, fantasy;
     font-size: clamp(0.9rem, 2.2vw, 4rem);
     color: #fff;
     width: 100%;
@@ -52,7 +52,7 @@ li
     background-color: #fff;
     margin: 1vw;
     padding: clamp(5px, 0.6vw,30px);
-    list-style:none;
+    list-style: none;
     color: #000;
     border: solid 0.8vh #000;
     font-size: clamp(3px, 11vw,25px);

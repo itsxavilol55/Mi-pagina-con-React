@@ -45,3 +45,16 @@
 	color: #fff;
 	font-family: Segoe, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
+.SUSCRIBIRSE, .SUSCRITO
+{
+	font-size: 95%;
+	font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+.SUSCRITO
+{
+	color: #888;
+}
+.SUSCRIBIRSE
+{
+	color: #f11;
+}

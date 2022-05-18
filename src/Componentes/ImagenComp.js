@@ -1,4 +1,4 @@
-import {useState, useEffect, memo} from 'react';
+import {useState, useEffect} from 'react';
 export default function Imagen(props)
 {
 	const API_URL = "https://picsum.photos/v2/list?page=2&limit=1000";
