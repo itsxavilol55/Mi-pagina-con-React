@@ -1,8 +1,11 @@
 import './CanalView.css';
-import Imagen from '../ImagenComp';
 import {useState,useEffect} from 'react';
 export default function Canalview() 
 {
+	const [subs, setSubs]= useState(Math.round(Math.random()*10000000));
+	const [isSub, setIsSub]= useState(false);
+	const [redond,setRedond]= useState(false);
+	const [subs2, setSubs2]= useState(subs);
 	return(
 		<>
 		<div className="contenedor">
@@ -10,20 +13,55 @@ export default function Canalview()
 			<div className="etiquetas">
 				<div>
 					<p className="nombre">Javier Eduardo</p>
-					<Contador/>
+					<Contador subs={subs}/>
 				</div>
 				<div>
-					<Subscrito/>
-					<p>Unirse</p>
+					<Subscrito 
+						isSub={isSub} 
+						setIsSub={setIsSub}
+						subs={subs}
+						setSubs={setSubs}/>
+					<Unirse isSub={isSub}/>
 				</div>
 			</div>
+			<Campana isSub={isSub}/>
 		</div>
+		<button 
+			onClick={()=>
+			{
+				setRedond(!redond);
+				Cambiar(subs, setSubs,redond,subs2);
+			}}
+			className="switchSubs">Redondear Subs</button>
 		</>);
 }
-function Contador()
+function Cambiar(subs, setSubs,redond,subs2) 
 {
-	let Subs = Math.round(Math.random()*10000000);
-	let texta = ""+Subs;
+	let subsAux = subs;
+	if(!redond)
+	{
+		subsAux = Math.trunc(subsAux / 10000);
+		setSubs(subsAux*10000);
+	}
+	else
+		setSubs(subs2);
+}
+const Campana = ({isSub}) =>
+{
+	const [CampAct, setCampAct] = useState(false);
+	if(isSub)
+	{
+		if(CampAct) return(<i onClick={()=> setCampAct(!CampAct)} className="Campana fa-solid fa-bell"></i>);
+		else return(<i onClick={()=> setCampAct(!CampAct)} className="Campana fa-regular fa-bell"></i>);
+	} 
+}
+const Unirse = ({isSub}) =>
+{
+	if(isSub) return(<p className="contador" style={{color: "#1af"}}>UNIRSE</p>);
+}
+function Contador(props)
+{
+	let texta = ""+props.subs;
 	let subs2="";
 	for(let i = texta.length; i>0; i--)
 	{
@@ -32,22 +70,26 @@ function Contador()
 		if(i>1) subs2 = ","+parte11+subs2;
 		else subs2 = parte11+subs2;
 	}
-	subs2 = subs2 +" suscritores"
+	subs2 = subs2 +" suscriptores";
 	return(
 		<>
 			<p className="contador">{subs2}</p>
 		</>);
 }
-function Subscrito()
+function Subscrito({isSub, setIsSub,subs, setSubs})
 {
 	let text="";
-	const [isSub, setIsSub]= useState(false);
 	if(isSub) text="SUSCRITO";
-	else text="SUSCRIBIRSE"
+	else text="SUSCRIBIRSE";
 	return(
 		<p 
 			className={text} 
-			onClick={()=> setIsSub(!isSub)}>
+			onClick={()=> 
+			{
+				setIsSub(!isSub);
+				if(!isSub) setSubs(subs+1);
+				else setSubs(subs-1);
+			}}>
 			{text}
 		</p>);
 }
